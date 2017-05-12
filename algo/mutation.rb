@@ -3,7 +3,14 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  mutation.split("").each do |let|
+    if base_word.include?(let)
+      next
+    else
+      return false
+    end
+  end
+  true
 end
 
 # Driver code - don't touch anything below this line.
